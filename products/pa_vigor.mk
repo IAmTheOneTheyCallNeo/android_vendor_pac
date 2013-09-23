@@ -18,25 +18,25 @@ PARANOID_BOOTANIMATION_NAME := XHDPI
 OVERLAY_TARGET := pa_xhdpi
 
 # Build paprefs from sources
-PREFS_FROM_SOURCE := true
+PREFS_FROM_SOURCE ?= false
 
 # Include ParanoidAndroid common configuration
 include vendor/pa/config/pa_common.mk
 
-# inherit from device vigor
+# inherit device configuration
 $(call inherit-product, device/htc/vigor/vigor.mk)
 
-# inherit from common msm8660
+# inherit common configuration
 -include device/htc/msm8660-common/BoardConfigCommon.mk
 
-# inherit from the proprietary version
+# inherit vendor configuration
 -include vendor/htc/vigor/BoardConfigVendor.mk
 
 # Include CM extras
 EXTRA_CM_PACKAGES ?= true
 
 # Override AOSP build properties
-PRODUCT_NAME := htc_vigor
+PRODUCT_NAME := pa_vigor
 PRODUCT_BRAND := htc
 PRODUCT_MODEL := Rezound
 PRODUCT_MANUFACTURER := HTC
