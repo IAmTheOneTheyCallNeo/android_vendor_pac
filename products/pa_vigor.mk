@@ -35,7 +35,7 @@ EXTRA_CM_PACKAGES ?= true
 # Override AOSP build properties
 PRODUCT_NAME := pa_vigor
 PRODUCT_BRAND := htc
-PRODUCT_MODEL := Rezound
+PRODUCT_MODEL := ADR6425LVW
 PRODUCT_MANUFACTURER := HTC
 
 # Include ParanoidAndroid repos configuration
